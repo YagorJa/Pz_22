@@ -1,6 +1,6 @@
 package by.teachmeskills.shopik.jaxb;
 
-import by.teachmeskills.shopik.model.Student;
+import by.teachmeskills.shopik.model.Order;
 import lombok.Data;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -10,17 +10,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 @Data
-@XmlRootElement(name = "students")
+@XmlRootElement(name = "order")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class StudentList {
-    @XmlElement(name = "student")
-    private List<Student> students;
+public class OrderList {
+    @XmlElement(name = "store")
+    private List<Order> orders;
 
     @Override
     public String toString() {
-        return "StudentList{" +
-                "students=" + students +
+        return "OrderList{" +
+                "orders=" + orders +
                 '}';
     }
 }
-
